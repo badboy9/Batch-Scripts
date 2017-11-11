@@ -1,0 +1,8 @@
+@ECHO OFF
+
+SETLOCAL
+SET ProgramToDelete="processname.exe"
+TASKKILL /IM "%ProgramToDelete%"
+
+rmdir /s /q %~dp0
+DEL "%~f0"

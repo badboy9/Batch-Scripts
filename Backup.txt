@@ -1,0 +1,8 @@
+@echo "BACKUP IN PROGRESS"
+@echo off
+
+set dt="%date:~-2,2%"."%date:~-7,2%"."%date:~0,2%"
+
+mkdir D:\Backup\%dt%
+
+xcopy /e /v /y /H D:\Source D:\Backup\%dt% >NUL
